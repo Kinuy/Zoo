@@ -32,26 +32,31 @@ public class Main {
 
         * */
         Species speciesBear = new Species("bear",5000);
+
         Animal animal1 = new Animal(1,"polar bear","mammal", 13,new Owner("Hans",23,"Woodlane 23"),speciesBear);
         Animal animal2 = new Animal(2,"brown bear","mammal", 13,new Owner("Karl",93,"Oaklane 13"),speciesBear);
         Animal animal3 = new Animal(3,"goldfish","fish", 13,new Owner("Helga",53,"Woodlane 25"),new Species("fish",5));
+
         System.out.println(animal1.equals(animal2));
         System.out.println(animal1.equals(animal1));
         System.out.println(animal3);
 
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(animal1);
+
         Zoo zoo = new Zoo(animals);
+
         zoo.addAnimalToZoo(animals);
-//        zoo.getTotalFoodRequirementOfZoo();
+
         animals.add(animal2);
+
         zoo.addAnimalToZoo(animals);
-        Zoo zoo2 = new Zoo(animals);
-        zoo2.getTotalFoodRequirementOfZoo();
+
         animals.add(animal3);
+
         zoo.addAnimalToZoo(animals);
-        Zoo zoo3 = new Zoo(animals);
-        zoo3.getTotalFoodRequirementOfZoo();
+
+        zoo.getTotalFoodRequirementOfZoo();
 
 
     }
